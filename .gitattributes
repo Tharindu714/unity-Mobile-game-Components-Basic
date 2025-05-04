@@ -1,0 +1,60 @@
+# ───────────────────────────────────────────────────────────────────────────────
+# 1) Vendored / binary assets (exclude from language stats)
+# ───────────────────────────────────────────────────────────────────────────────
+# Textures & sprites
+*.png linguist-vendored
+*.jpg linguist-vendored
+*.tga linguist-vendored
+*.psd linguist-vendored
+
+# 3D models & animations
+*.fbx linguist-vendored
+*.obj linguist-vendored
+*.anim linguist-vendored
+
+# Audio
+*.wav linguist-vendored
+*.mp3 linguist-vendored
+*.ogg linguist-vendored
+
+# Unity-specific
+/Library/** linguist-vendored
+/Temp/**    linguist-vendored
+/obj/**     linguist-vendored
+
+# ───────────────────────────────────────────────────────────────────────────────
+# 2) Force Linguist to count these as code in the languages you choose
+# ───────────────────────────────────────────────────────────────────────────────
+# Shaders
+*.shader linguist-language=ShaderLab
+*.cginc  linguist-language=Cg
+*.compute linguist-language=HLSL
+
+# Unity YAML scene & prefab files
+*.unity linguist-language=YAML
+*.prefab linguist-language=YAML
+
+# Data & config
+*.json linguist-language=JSON
+*.xml  linguist-language=XML
+*.yaml linguist-language=YAML
+*.yml  linguist-language=YAML
+
+# Visual Scripting (Bolt)
+*.bolt linguist-language=JSON
+*.uxml linguist-language=XML
+
+# Optional scripting addons
+*.lua linguist-language=Lua
+*.py  linguist-language=Python
+
+# Web UI for WebGL builds
+*.html linguist-language=HTML
+*.css  linguist-language=CSS
+*.js   linguist-language=JavaScript
+
+# ───────────────────────────────────────────────────────────────────────────────
+# 3) Keep C# as-is (no override needed; Linguist auto-detects .cs → C#)
+# ───────────────────────────────────────────────────────────────────────────────
+
+# End of .gitattributes
